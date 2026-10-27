@@ -1,3 +1,5 @@
+using System.Reflection.Metadata.Ecma335;
+
 public class Drone
 {
     public string Name { get; set; }
@@ -12,12 +14,12 @@ public class Drone
     public string Describe()
     {
         // TODO
-        return "";
+        return $"{Name} has {FlightHours}";
     }
 
     public bool NeedsService()
     {
         // TODO
-        return false;
+        return FlightHours >= 100;
     }
 }
